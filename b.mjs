@@ -23,7 +23,9 @@ import test from "./test.mjs";
 function formatName(name){
      if (typeof name !== "string") {
     return null;
+    
   }
+   let cutName = name.trim();
 }
 
 
