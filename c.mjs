@@ -14,8 +14,16 @@ function sequence(n) {
  if (isNaN(n) || isNaN(n) || typeof n !== "number" || typeof n !== "number" || !Number.isInteger(n) || n < 0) {
         return null;
  }
-}
 
+ let digit1 = 0, digit2 = 1;
+
+    for (let i = 2; i <= n; i++) {
+      let current = digit1 + digit2;
+      digit1 = digit2;
+      digit2 = current;
+    }
+    return digit2
+} 
 //#region Tests --------------------------------------------------------------------
 const tests = test("Sum function");
 
