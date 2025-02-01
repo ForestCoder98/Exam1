@@ -27,7 +27,12 @@ function formatName(name){
   }
    let cutName = name.trim();
 }
+const splitWords = cutName.split(" ");
 
+  for (let i = 0; i < splitWords.length; i++) {
+    splitWords[i] = splitWords[i][0].toUpperCase() + splitWords[i].substr(1);
+  }
+  return splitWords.join(" ");
 
 //#endregion
 
