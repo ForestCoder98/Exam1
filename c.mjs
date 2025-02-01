@@ -13,7 +13,9 @@ import test from "./test.mjs";
 function sequence(n) {
  if (isNaN(n) || isNaN(n) || typeof n !== "number" || typeof n !== "number" || !Number.isInteger(n) || n < 0) {
         return null;
- }
+ }  else if ( n == 0 ){
+        return 0
+    }
 
  let digit1 = 0, digit2 = 1;
 
