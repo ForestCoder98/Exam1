@@ -23,14 +23,16 @@ function multiply(a, b){
     let digitA = Number(a);
     let digitB = Number(b);
     
-    if (isNaN(a) || isNaN(b)){
+    if (isNaN(digitA) || isNaN(digitB)){
         return NaN;
 }     else if ( digitA == Infinity ||  digitB == Infinity ){
         return Infinity
     } else if ( digitA == -Infinity || digitB == -Infinity){
         return -Infinity
+        } else if ( digitA == 0 || digitB == 0 ){
+        return 0
     }
-    return a * b;
+    return digitA * digitB;
 }
 
 
