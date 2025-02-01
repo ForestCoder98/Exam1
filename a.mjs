@@ -20,9 +20,11 @@ import test from "./test.mjs";
 //#region function -----------------------------------------------------------------
 // Write your function her.
 function multiply(a, b){
+     if (isNaN(a) || isNaN(b)){
+        return NaN;
+}
     return a * b;
 }
-
 
 
 //#endregion
