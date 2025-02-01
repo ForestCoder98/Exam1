@@ -29,8 +29,10 @@ function formatName(name){
 
      if (NameTrimmed == "") {
     return "";
+     } else if (cutName.includes("[`!@#$%^&*()_+-=[]{};':\"\\|,.<>/?~]/")) {
+    return null;
      }
-
+     
     const splitWords = cutName.split(" ");
      
   for (let i = 0; i < splitWords.length; i++) {
