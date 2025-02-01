@@ -27,7 +27,7 @@ function formatName(name){
   }
     let cutName = name.trim();
 
-     if (NameTrimmed == "") {
+     if (cutName == "") {
     return "";
      } else if (cutName.includes("[`!@#$%^&*()_+-=[]{};':\"\\|,.<>/?~]/")) {
     return null;
@@ -48,7 +48,13 @@ function formatName(name){
 
 //#region Tests --------------------------------------------------------------------
 // Write your tests her.
+const tests = test("FormatName function");
 
+tests.isEqual(formatName("glory and honor"), "Glory And Honor", "formatted version of glory and honor should be Glory And Honor");
+tests.isEqual(formatName("@$"), "@$", "formatted version of @$ should be null");
+tests.isEqual(formatName(74), null, "formatted version of 74 should be null");
+tests.isEqual(formatName("   heresy"), "Heresy", "formatted version of   heresy should be Heresy");
+tests.isEqual(formatName("     "), "", "formatted version of       should be ");
 
 
 //#endregion
