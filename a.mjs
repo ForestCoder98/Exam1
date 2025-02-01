@@ -44,6 +44,16 @@ function multiply(a, b){
 
 //#region Tests --------------------------------------------------------------------
 // Write your tests her.
+const tests = test("Sum function");
+
+tests.isEqual(multiply(7, 71), 497, "Sum of 7 and 71 should be 497");
+tests.isEqual(multiply(10, 100), 1000, "Sum of 10 and 100 should be 1000");
+tests.isNotANumber(multiply("cat", 9), "Sum of cat and 7 should be NaN");
+tests.isEqual(multiply(0, 17), 0, "Sum of 0 and 17 should be 0");
+tests.isEqual(multiply(Infinity, 1), Infinity, "Sum of infinity and 1 should be Infinity");
+tests.isEqual(multiply(-Infinity, 1), -Infinity, "Sum of -infinity and 1 should be -Infinity");
+tests.isEqual(multiply("5", "2"), 10, "Sum of 5 and 2 should be 10");
+tests.isNotANumber(multiply("dog", 3), "Sum of dog and 3 should be Nan");
 
 
 
