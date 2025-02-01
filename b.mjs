@@ -21,7 +21,9 @@ import test from "./test.mjs";
 // Write your function her.
 
 function formatName(name){
-    
+     if (typeof name !== "string") {
+    return null;
+  }
 }
 
 
