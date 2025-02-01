@@ -25,15 +25,19 @@ function formatName(name){
     return null;
     
   }
-   let cutName = name.trim();
-}
-const splitWords = cutName.split(" ");
+    let cutName = name.trim();
 
+     if (NameTrimmed == "") {
+    return "";
+     }
+
+    const splitWords = cutName.split(" ");
+     
   for (let i = 0; i < splitWords.length; i++) {
     splitWords[i] = splitWords[i][0].toUpperCase() + splitWords[i].substr(1);
   }
   return splitWords.join(" ");
-
+}
 //#endregion
 
 
