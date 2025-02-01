@@ -24,7 +24,9 @@ import test from "./test.mjs";
 // Write your function her.
 
 function guessNumber(target, guess) {
-if ( guess < target){
+if ( isNaN(target) || isNaN(guess) || !Number.isInteger(target) || !Number.isInteger(guess)){
+    return null
+} else if ( guess < target){
     return "Too low"
 } else if (guess > target){
     return "Too high"
@@ -45,9 +47,11 @@ tests.isEqual(guessNumber(10, 15), "Too high", "If target is 10 and guess is 15,
 tests.isEqual(guessNumber(10, 10), "Correct!", "If target is 10 and guess is 10, return 'Correct!'");
 
 // Invalid inputs
-
+tests.isEqual(guessNumber("Astartes"), null, "String input should return null");
 
 // Edge cases
-
+tests.isEqual(guessNumber(4.3), null, "Non-integer input should return null");
+tests.isEqual(guessNumber("5"), null, "String input should return null");
+tests.isEqual(guessNumber(null), null, "Null input should return null");
 
 //#endregion
