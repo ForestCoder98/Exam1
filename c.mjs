@@ -11,7 +11,9 @@ import test from "./test.mjs";
 */
 
 function sequence(n) {
-
+ if (isNaN(n) || isNaN(n) || typeof n !== "number" || typeof n !== "number" || !Number.isInteger(n) || n < 0) {
+        return null;
+ }
 }
 
 //#region Tests --------------------------------------------------------------------
