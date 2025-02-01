@@ -22,9 +22,14 @@ import test from "./test.mjs";
 function multiply(a, b){
     let digitA = Number(a);
     let digitB = Number(b);
+    
     if (isNaN(a) || isNaN(b)){
         return NaN;
-}
+}     else if ( digitA == Infinity ||  digitB == Infinity ){
+        return Infinity
+    } else if ( digitA == -Infinity || digitB == -Infinity){
+        return -Infinity
+    }
     return a * b;
 }
 
